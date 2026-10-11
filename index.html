@@ -3,47 +3,43 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b1020">
-  <title>Zukat AI - Trợ lý AI</title>
+  <title>Zukat AI</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #0b1020;
-      color: #ffffff;
+      color: white;
     }
 
     header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding: 18px 20px;
+      align-items: center;
+      padding: 18px;
       background: #111a30;
-      border-bottom: 1px solid #293654;
     }
 
     .logo {
-      color: #8da0ff;
       font-size: 23px;
       font-weight: bold;
+      color: #91a2ff;
     }
 
     nav a {
-      margin-left: 12px;
       color: white;
       text-decoration: none;
-      font-size: 14px;
+      margin-left: 12px;
     }
 
     main {
       min-height: 78vh;
-      padding: 35px 20px;
+      padding: 30px 18px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -51,60 +47,46 @@
       text-align: center;
     }
 
-    h1 {
-      font-size: clamp(30px, 7vw, 48px);
-      margin-bottom: 12px;
+    h1 { font-size: 36px; }
+
+    p {
+      color: #c0cbe5;
+      line-height: 1.7;
     }
 
-    .description {
-      max-width: 550px;
-      color: #bdc8e5;
-      line-height: 1.8;
-    }
-
-    .button {
+    .btn {
       display: inline-block;
-      margin: 10px 5px;
       padding: 14px 22px;
-      border: 0;
-      border-radius: 30px;
+      margin: 8px 4px;
       background: #7185ff;
       color: white;
-      font-size: 16px;
+      border: 0;
+      border-radius: 25px;
       text-decoration: none;
+      font-size: 16px;
       cursor: pointer;
     }
 
-    .button:hover {
-      background: #596ee8;
-    }
-
     .features {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(90px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 12px;
-      width: 100%;
-      max-width: 650px;
-      margin-top: 30px;
+      margin-top: 25px;
     }
 
     .feature {
-      padding: 20px 8px;
-      border: 1px solid #293654;
-      border-radius: 15px;
+      width: 130px;
+      padding: 18px 8px;
       background: #151f38;
-    }
-
-    .feature p {
-      margin-bottom: 0;
-      color: #c3cce4;
-      font-size: 14px;
+      border: 1px solid #293654;
+      border-radius: 14px;
     }
 
     footer {
-      padding: 22px;
       text-align: center;
-      color: #8591b1;
+      padding: 20px;
+      color: #8995b5;
     }
 
     #openBotpress {
@@ -120,42 +102,18 @@
       color: white;
       font-size: 32px;
       cursor: pointer;
-      box-shadow: 0 5px 20px #0007;
-    }
-
-    @media (max-width: 400px) {
-      header {
-        padding: 15px 10px;
-      }
-
-      .logo {
-        font-size: 19px;
-      }
-
-      nav a {
-        margin-left: 7px;
-        font-size: 12px;
-      }
-
-      .features {
-        gap: 7px;
-      }
+      touch-action: manipulation;
     }
   </style>
 
-  <!-- Botpress Webchat: mã của bạn -->
+  <!-- Botpress: giữ đúng mã của bạn -->
   <script src="https://cdn.botpress.cloud/webchat/v3.7/inject.js"></script>
-  <script
-    src="https://files.bpcontent.cloud/2026/10/11/03/20261011032028-NA7MEZJA.js"
-    defer>
-  </script>
+  <script src="https://files.bpcontent.cloud/2026/10/11/03/20261011032028-NA7MEZJA.js" defer></script>
 </head>
 
 <body>
-
   <header>
     <div class="logo">✧ Zukat AI</div>
-
     <nav>
       <a href="index.html">Trang chủ</a>
       <a href="chat.html">Trò chuyện</a>
@@ -165,48 +123,29 @@
   <main>
     <h1>Chào mừng đến Zukat AI ✧</h1>
 
-    <p class="description">
+    <p>
       Trợ lý AI đồng hành cùng bạn.<br>
-      Hỏi đáp, học tập và khám phá kiến thức mới
-      cùng chatbot của Zukat.
+      Hỏi đáp, học tập và khám phá kiến thức mới.
     </p>
 
     <div>
-      <button class="button" id="startChat">
+      <button class="btn" id="startChat" type="button">
         ✧ Bắt đầu trò chuyện
       </button>
 
-      <a class="button" href="chat.html">
-        Trang chat riêng
-      </a>
+      <a class="btn" href="chat.html">Trang chat riêng</a>
     </div>
 
     <div class="features">
-      <div class="feature">
-        📚
-        <p>Học tập</p>
-      </div>
-
-      <div class="feature">
-        💡
-        <p>Giải đáp</p>
-      </div>
-
-      <div class="feature">
-        ✍️
-        <p>Viết nội dung</p>
-      </div>
+      <div class="feature">📚<p>Học tập</p></div>
+      <div class="feature">💡<p>Giải đáp</p></div>
+      <div class="feature">✍️<p>Viết nội dung</p></div>
     </div>
   </main>
 
-  <footer>
-    Zukat AI · Trợ lý AI của bạn
-  </footer>
+  <footer>Zukat AI · Trợ lý AI của bạn</footer>
 
-  <button
-    id="openBotpress"
-    type="button"
-    aria-label="Mở chatbot Zukat AI">
+  <button id="openBotpress" type="button" aria-label="Mở chatbot">
     ✧
   </button>
 
@@ -219,20 +158,17 @@
         window.botpress.open();
       } else {
         alert(
-          "Botpress chưa sẵn sàng. Hãy đợi vài giây, " +
-          "tải lại trang rồi thử lại."
+          "Nút Zukat hoạt động! Nhưng Botpress chưa sẵn sàng. " +
+          "Hãy kiểm tra Embed code và cấu hình Webchat."
         );
       }
     }
 
-    document
-      .getElementById("openBotpress")
+    document.getElementById("openBotpress")
       .addEventListener("click", openZukatChat);
 
-    document
-      .getElementById("startChat")
+    document.getElementById("startChat")
       .addEventListener("click", openZukatChat);
   </script>
-
 </body>
 </html>
